@@ -1,0 +1,26 @@
+.app__card {
+  max-width: 250px;
+  width: 100%;
+  border: 2px solid var(--offwhite-color);
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.app__card img {
+  width: 100%;
+}
+
+.app__card-body {
+  padding: 0.5rem;
+}
+
+.app__card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app__card-stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

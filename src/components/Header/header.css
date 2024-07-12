@@ -1,0 +1,14 @@
+.app__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  background-color: var(--secondary-color);
+  padding: 0.5rem 1rem;
+  color: var(--primary-color);
+}
+
+.app__header-buttons {
+  display: flex;
+  gap: 1rem;
+}
