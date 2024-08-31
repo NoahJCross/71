@@ -12,6 +12,7 @@
 
 .app__featuredview-cards {
   display: flex;
+  gap: 3rem;
   justify-content: space-between;
   max-width: 1000px;
   width: 100%;

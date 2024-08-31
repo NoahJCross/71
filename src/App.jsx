@@ -7,6 +7,7 @@ import { FirebaseProvider } from "./context/AuthContext/AuthContext";
 import AuthLayout from "./layouts/AuthLayout/AuthLayout";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import Post from "./pages/Post/Post";
 
 function AppRouter() {
   return (
@@ -17,6 +18,7 @@ function AppRouter() {
       </Route>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
+        <Route path="/post" element={<Post />} />
       </Route>
     </Routes>
   );

@@ -40,6 +40,7 @@ const Register = () => {
               placeholder="First Name"
               name="firstName"
               id="firstName"
+              required
             />
             <input
               className="app__register-form-input"
@@ -47,6 +48,7 @@ const Register = () => {
               placeholder="Last Name"
               name="lastName"
               id="lastName"
+              required
             />
             <input className="app__register-form-input" type="email" placeholder="Email" name="email" id="email" />
             <input
@@ -55,6 +57,7 @@ const Register = () => {
               placeholder="Password"
               name="password"
               id="password"
+              required
             />
             <Button type="submit">Sign Up</Button>
           </div>

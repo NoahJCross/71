@@ -35,13 +35,21 @@ const Login = () => {
         <article>
           <h1 className="app__login-form-heading">Sign In</h1>
           <div className="app__login-form-details">
-            <input className="app__login-form-input" type="email" placeholder="Email" name="email" id="email" />
+            <input
+              className="app__login-form-input"
+              type="email"
+              placeholder="Email"
+              name="email"
+              id="email"
+              required
+            />
             <input
               className="app__login-form-input"
               type="password"
               placeholder="Password"
               name="password"
               id="password"
+              required
             />
             <Button type="submit">Sign In</Button>
           </div>

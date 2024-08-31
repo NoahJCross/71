@@ -1,11 +1,17 @@
 import Button from "../Button/Button";
 import Search from "../Search/Search";
 import { Link } from "react-router-dom";
-import "./header.css";
 import { useAuthContext } from "../../context/AuthContext/AuthContext";
 import { useNavigate } from "react-router-dom";
+import SideBar from "../SideBar/SideBar";
+import { IoMdMenu } from "react-icons/io";
+import "./header.css";
+import { useState } from "react";
+
+const navList = ["Home", "Post"];
 
 const Header = () => {
+  const [active, setActive] = useState(false);
   const { user, logout } = useAuthContext();
   const navigate = useNavigate();
   const handleSearch = (searchTerm) => {};
@@ -17,6 +23,11 @@ const Header = () => {
       console.log(error.message);
     }
   };
+
+  const toggleIsActive = () => {
+    setActive((prev) => !prev);
+  };
+
   return (
     <div className="app__header">
       <div className="app__header-brand">
@@ -24,7 +35,6 @@ const Header = () => {
       </div>
       <Search onSearch={handleSearch} />
       <div className="app__header-buttons">
-        <Button>Post</Button>
         {user ? (
           <Button onClick={handleLogout}>Logout</Button>
         ) : (
@@ -32,6 +42,10 @@ const Header = () => {
             <Button>Login</Button>
           </Link>
         )}
+        <Button onClick={toggleIsActive}>
+          <IoMdMenu size={24} />
+        </Button>
+        <SideBar isActive={active} navitems={navList} />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import "./home.css";
-import { articles } from "../../assets/articles";
+import { articles, tutorials } from "../../assets/articles";
 import banner from "../../assets/banner.jpg";
 import FeaturedView from "../../components/FeaturedView/FeaturedView";
 import Newsletter from "../../components/Newsletter/Newsletter";
@@ -11,7 +11,7 @@ const Home = () => {
         <img src={banner} alt="deakin building" />
       </div>
       <FeaturedView cards={articles} title={"Articles"} />
-      <FeaturedView cards={articles} title={"Tutorials"} />
+      <FeaturedView cards={tutorials} title={"Tutorials"} />
       <Newsletter />
     </div>
   );

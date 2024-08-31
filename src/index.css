@@ -1,9 +1,13 @@
 :root {
   --primary-color: #f0f0f0;
   --primary-hover: #e9e9e9;
+  --white-color: #f9f9f9;
+  --card-border: #ccc;
   --secondary-color: #333;
   --secondary-hover: #272727;
   --offwhite-color: rgb(216, 216, 216);
+  --title-header: rgb(199, 199, 199);
+  --header-height: 68px;
 }
 
 * {
@@ -41,6 +45,13 @@ textarea {
   font-size: inherit;
   line-height: inherit;
   color: inherit;
+}
+
+input:disabled,
+textarea:disabled,
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 hr {
